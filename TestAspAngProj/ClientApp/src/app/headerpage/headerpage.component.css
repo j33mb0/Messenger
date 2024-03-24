@@ -1,0 +1,154 @@
+.main-container {
+    width: 98.5vw;
+    background-color: #E6E6FA;
+    margin-top: 7px;
+    margin-left: 10px;
+    border: 1px solid #888;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    width: 200vw;
+    height: 5vh;
+    background-color: #E6E6FA;
+    justify-content:space-between; 
+    align-items: center;
+    position: relative;
+
+
+}
+.name-container {
+    margin-top: 5px;
+    margin-left: -100px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.userpanel-container {
+    display: flex;
+    right: 0;
+    position: absolute;
+    margin-bottom: 5px;
+}
+
+
+.buttons-container {
+    float: right;
+    width: 6vw;
+    border: 1px solid #888;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin-right: -250px; 
+}
+.settings-button-img {
+    width: 30px;
+    height: 30px;
+}
+
+.logout-botton-img {
+    width: 30px;
+    height: 30px;
+}
+
+.imguserheader {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+.username-label {
+    margin-left: 10px;
+    margin-top: 18px;
+}
+
+.settings-button {
+    margin-left: 10px;
+}
+
+.logout-button {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #93c1c7;
+    width: 420px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: 70vw;
+    margin-top: 7px;
+    height: 300px;
+}
+
+.settingspdiv {
+    text-align: center;
+}
+
+.changenicknamediv {
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+}
+
+.changenicknamep {
+    margin-left: 15px;
+}
+.changeavatarp {
+    margin-left: 15px;
+}
+
+.changenicknameinput {
+    width: 83%;
+    height: 15px;
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+.changeavatarinput {
+    width: 83%;
+    height: 15px;
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+
+.changenicknamebuttonimg {
+    height: 15px;
+    width: 15px;
+}
+.changeavatarbuttonimg {
+    height: 15px;
+    width: 15px;
+}
+
+.changenicknameerrordiv {
+    background-color: red;
+    width: 90%;
+    margin-left: 20px;
+}
+.changeavatarerrordiv {
+    background-color: red;
+    width: 90%;
+    margin-left: 20px;
+}

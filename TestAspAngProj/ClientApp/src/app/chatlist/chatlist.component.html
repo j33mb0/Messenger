@@ -1,0 +1,52 @@
+<div class="maindiv">
+    <div class="chat-block" [style.height.vh]="chatblockheight">
+        <ul>
+          <li *ngFor="let chat of chats">
+            <div class="chat-container" [ngClass]="{selectedChat: chat === selectedChat}" (click)="onChatClick(chat)">
+              <img [src]="chat.otherUserImg">
+              <div class="chat-details">
+                <h3>{{chat.otherUserName}}</h3>
+                <p>{{chat.lastMessage}}</p>
+              </div>
+              <div class="time-message">
+                <p>{{chat.lastMessageDate | date:'medium'}}</p>
+              </div>
+            </div>
+          </li>
+          <li *ngIf="!chats || chats.length === 0">
+            <p class="nomsgp">No chats available yeat</p>
+          </li>
+        </ul>
+    </div>
+    
+    <div class="addchat-panel" [style.height.vh]="addpanelheight">
+      <div *ngIf="!isAddPanelOpen" class="closed-div">
+        <button class="open-button" (click)="openAddPanel()">Create new chat</button>
+      </div>
+      <div *ngIf="isAddPanelOpen" class="opened-div">
+        <div class="close-button-container">
+          <button class="close-button" (click)="closeAddPanel()">&times;</button>
+        </div>
+        <label class="search-label">Search user</label>
+        <div class="searchform-div">
+          <form [formGroup]="searchForm">
+            <input class="search-input" type="text" id="username" formControlName="username" placeholder="Input username here...">
+            <button class="formsearch-button" (click)="searchUsers()">search</button>
+          </form>
+        </div>
+        <label class="results-label">Results:</label>
+        <div class="searchresults-div">
+          <div *ngFor="let result of searchResults">
+            <div class="result-container">
+              <img class="result-userimg" [src]="result.userimgurl ? result.userimgurl : userDefaultImg">
+              <p class="result-p">{{result.username}}</p>
+              <button class="createchat-button" (click)="createChat(result.userid)">Create chat</button>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="isChatCreateErrorMsgVisible" class="errorMsgDiv">
+          <p>{{ChatCreateErrorMsg}}</p>
+        </div>
+      </div>
+    </div>
+</div>

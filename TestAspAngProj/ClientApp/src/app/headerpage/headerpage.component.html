@@ -1,0 +1,44 @@
+<div class="main-container">
+<div class="container">
+    <div class="name-container">
+        <label class="name-label">MANKI CHAT</label>
+    </div>
+    <div class="userpanel-container">
+            <img class="imguserheader" [src]="userimg">
+            <label class="username-label">{{username}}</label>
+    </div>
+        <div class="buttons-container">
+            <button class="settings-button" (click)="toogleDropdown()">
+                <img class="settings-button-img" src="data:image/png;base64,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">
+            </button>
+            <button class="logout-button" (click)="logOut()">
+                <img class="logout-botton-img" src="https://cdn.vectorstock.com/i/transparent-2x/93/31/web-secure-session-sign-out-internet-logoff-vector-25729331.webp">
+            </button>
+        </div>
+</div>
+<div class="dropdown-content" *ngIf="isDropdownOpen">
+    <div class="settingspdiv">
+        <p class="settingsp">Settings</p>
+    </div>
+    <div [formGroup]="changeNicknameForm" class="changenicknamediv">
+        <p class="changenicknamep">Change nickname:</p>
+        <input  formControlName="nickname" class="changenicknameinput" type="text" placeholder="Input new nickname here..."/>
+        <button [disabled]="changeNicknameForm.invalid" class="changenicknamebutton" (click)="changeNickname()">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAJ7Get2YkUhisLi7eQ8HqlShRDI4T9A4QSxjvmA5bkg&s" class="changenicknamebuttonimg"/>
+        </button> 
+        <div class="changenicknameerrordiv" *ngIf="isChangeNicknameErrorVisible">
+            <p class="nicknameerror">{{changeNicknameError}}</p>
+        </div>
+    </div>
+    <div [formGroup]="changeAvatarForm" class="changeavatardiv">
+        <p class="changeavatarp">Change userimg</p>
+        <input formControlName="url" class="changeavatarinput" type="text" placeholder="Input new image url here..."/>
+        <button [disabled]="changeAvatarForm.invalid" class="changeavatarbutton" (click)="changeUserimg()">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAJ7Get2YkUhisLi7eQ8HqlShRDI4T9A4QSxjvmA5bkg&s" class="changeavatarbuttonimg"/>
+        </button> 
+        <div class="changeavatarerrordiv" *ngIf="isChangeAvatarErrorVisible">
+            <p class="avatarerror">{{changeAvatarError}}</p>
+        </div>
+    </div>
+</div>
+</div>

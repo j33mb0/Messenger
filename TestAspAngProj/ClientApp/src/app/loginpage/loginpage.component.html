@@ -1,0 +1,54 @@
+<div class="loginpage-container">
+    <div class="login-content">
+      <div class="button-menu">
+        <button [ngClass]="{ 'SelectedBtn': isFirstButtonSelected}" id="loginBtn" class="Btn" (click)="toogleForm('loginForm')">SIGN IN</button>
+        <button [ngClass]="{ 'SelectedBtn': isSecondButtonSelected}" id="registerBtn" class="Btn" (click)="toogleForm('registerForm')">SIGN UP</button>
+      </div>
+      <div class="forms-container">
+        <form [formGroup]="loginForm" *ngIf="isLoginFormVisible" id="loginForm" class="loginForm">
+          <p class="psign">SIGN IN</p>
+          <div class="inputs-container">
+            <label class="label">Login</label>
+            <input formControlName="login" type="text" class="logininput" placeholder="Input login here...">
+            <div class="errormsglogin" *ngIf="loginForm.get('login')?.hasError('minlength')">
+              Minimal length: 6
+            </div>
+            <label class="label">Password</label>
+            <input formControlName="password" type="password" class="passwordinput" placeholder="Input password here...">
+          </div>
+          <button [disabled]="loginForm.invalid" type="submit" class="inputBtn" (click)="login()">
+            Sign in
+          </button>
+        </form>
+        <form [formGroup]="registerForm" *ngIf="isRegisterFormVisible" id="loginForm" class="loginForm">
+          <p class="psigp">REGISTER</p>
+          <div class="inputs-container">
+            <label class="label">Login</label>
+            <input formControlName="login" type="text" class="logininput" placeholder="Input login here...">
+            <label class="label">Password</label>
+            <input formControlName="password" type="password" class="passwordinput" placeholder="Input password here...">
+            <label class="label">Repeat the password</label>
+            <input formControlName="confirmPassword" type="password" class="passwordinput" placeholder="Repeat the password here...">
+          </div>
+          <button [disabled]="registerForm.invalid" type="submit" class="regBtn" (click)="register()">
+            Register
+          </button>
+        </form>
+      </div>
+      <div *ngIf="isLoginErrorVisible" class="errorLoginDiv">
+        <p class="errorMsg">
+          {{errorMsg}}
+        </p>
+      </div>
+      <div *ngIf="isRegisterErrorVisible" class="errorLoginDiv">
+        <p class="errorMsg">
+          {{registerErrorMsg}}
+        </p>
+      </div>
+      <div *ngIf="isRegisterSuccessful" class="successfulRegisterDiv">
+        <p class="successMsg">
+          Registration successful
+        </p>
+      </div>
+    </div>
+  </div>

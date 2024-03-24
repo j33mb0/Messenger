@@ -1,0 +1,24 @@
+<div class="maindiv">
+<div class="chatview-container">
+    <div class="head" *ngIf="selectedChat">
+        <img class="imguser" [src]="selectedChat.otherUserImg" alt="non"/>  
+        <p class="username">{{selectedChat.otherUserName}}</p>
+    </div>
+    <div class="head" *ngIf="!selectedChat">
+        <img class="imguser" [src]="userDefaultImg" alt="non"/>
+        <p class="username">Username</p>
+    </div>
+    <div class="message-container" #messagecontainer>
+        <div *ngFor="let message of messages" [ngClass]="{'from-other': !isMessageFromCurrentUser(message), 'from-current': isMessageFromCurrentUser(message)}">
+            <p [ngClass]="{'from-other-content': !isMessageFromCurrentUser(message), 'from-current-content': isMessageFromCurrentUser(message)}">{{message.content}}</p>
+            <p [ngClass]="{'from-other-date': !isMessageFromCurrentUser(message), 'from-current-date': isMessageFromCurrentUser(message)}">{{message.date | date:'medium'}}</p>
+        </div>
+    </div>
+    <div class="message-writter">
+        <input class="inputmessage" type="text" placeholder="Input message..." [(ngModel)]="sendMessageText"/>
+        <button class="send-btn" (click)="sendMessage()">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAJ7Get2YkUhisLi7eQ8HqlShRDI4T9A4QSxjvmA5bkg&s" class="send-button-img"/>
+        </button>
+    </div>
+</div>
+</div>

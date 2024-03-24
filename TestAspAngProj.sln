@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAspAngProj", "TestAspAngProj\TestAspAngProj.csproj", "{7DC1078B-FF9A-49A9-8FDD-9D6D0C61E952}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DC1078B-FF9A-49A9-8FDD-9D6D0C61E952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC1078B-FF9A-49A9-8FDD-9D6D0C61E952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC1078B-FF9A-49A9-8FDD-9D6D0C61E952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC1078B-FF9A-49A9-8FDD-9D6D0C61E952}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50975EF6-1391-4777-8B54-E52C393E2032}
+	EndGlobalSection
+EndGlobal
